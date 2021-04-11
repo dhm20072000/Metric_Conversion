@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Metric_Conversion.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="wrapper">
+                <div id="banner">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/banner.jpg" Width="100%" />
+                </div>
+                <div id="navigation">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Pages/About.aspx" Text="About" Value="About"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/Length.aspx" Text="Length" Value="Length">
+                                <asp:MenuItem NavigateUrl="~/Submenus/kmandmiles.aspx" Text="Conversion page" Value="Conversion page"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/Liquid.aspx" Text="Liquid" Value="Liquid">
+                                <asp:MenuItem NavigateUrl="~/Submenus/liquidsubmenu.aspx" Text="Gallon/Liter" Value="Gallon/Liter"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Submenus/liquidsubmenu1.aspx" Text="Gallon/Pint" Value="Gallon/Pint"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Submenus/liquidsubmenu2.aspx" Text="Gallon/Quart" Value="Gallon/Quart"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/Temperature.aspx" Text="Temperature" Value="Temperature">
+                                <asp:MenuItem NavigateUrl="~/Submenus/temperaturesubmenu.aspx" Text="Conversion page" Value="Conversion page"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/Mass.aspx" Text="Mass" Value="Mass">
+                                <asp:MenuItem NavigateUrl="~/Submenus/masssubmenu.aspx" Text="Conversion page" Value="Conversion page"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/History.aspx" Text="History" Value="History"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </div>
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
